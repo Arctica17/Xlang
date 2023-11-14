@@ -1,0 +1,124 @@
+alloc x  
+load_const 0  temp_literal
+store temp_var  x
+load_const 0  temp_literal
+alloc y  
+load_const 10  temp_literal
+store temp_var  y
+load_const 10  temp_literal
+load array  temp_var
+load_const 0  temp_literal
+load_const 1  temp_literal
+load_const 2  temp_literal
+load_const 3  temp_literal
+load_const 4  temp_literal
+load map  temp_var
+load_const name  temp_literal
+load_const Alice  temp_literal
+key_value_pair temp_key temp_value temp_pair
+load_const name  temp_literal
+load_const Alice  temp_literal
+Function: init
+load x  temp_var
+load_const 1  temp_literal
+operator +  
+load_const 2  temp_literal
+load_const 0  temp_literal
+label loop_start  
+load_const 10  temp_literal
+if_false temp_condition loop_end 
+load array  temp_var
+load i  temp_var
+load i  temp_var
+add i  
+goto loop_start  
+label loop_end  
+load array  temp_var
+load i  temp_var
+load i  temp_var
+load x  temp_var
+load_const 1  temp_literal
+operator +  
+load_const 2  temp_literal
+load_const 0  temp_literal
+label loop_start  
+load_const 10  temp_literal
+if_false temp_condition loop_end 
+load array  temp_var
+load i  temp_var
+load i  temp_var
+add i  
+goto loop_start  
+label loop_end  
+load array  temp_var
+load i  temp_var
+load i  temp_var
+Function: max
+load a  temp_var
+operator >=  
+load b  temp_var
+if_false temp_condition label_else 
+load a  temp_var
+return   
+goto label_end_if  
+label label_else  
+load b  temp_var
+return   
+label label_end_if  
+load a  temp_var
+operator >=  
+load b  temp_var
+load a  temp_var
+return   
+load b  temp_var
+return   
+load a  temp_var
+operator >=  
+load b  temp_var
+if_false temp_condition label_else 
+load a  temp_var
+return   
+goto label_end_if  
+label label_else  
+load b  temp_var
+return   
+label label_end_if  
+load a  temp_var
+operator >=  
+load b  temp_var
+load a  temp_var
+return   
+load b  temp_var
+return   
+Function: main
+load init  temp_var
+call_function temp_func_name  temp_result
+load init  temp_var
+load x  temp_var
+load max  temp_var
+load x  temp_var
+load y  temp_var
+call_function temp_func_name temp_param, temp_param temp_result
+load max  temp_var
+load x  temp_var
+arg temp_param  
+load y  temp_var
+arg temp_param  
+load x  temp_var
+load y  temp_var
+end_main   
+load init  temp_var
+call_function temp_func_name  temp_result
+load init  temp_var
+load x  temp_var
+load max  temp_var
+load x  temp_var
+load y  temp_var
+call_function temp_func_name temp_param, temp_param temp_result
+load max  temp_var
+load x  temp_var
+arg temp_param  
+load y  temp_var
+arg temp_param  
+load x  temp_var
+load y  temp_var

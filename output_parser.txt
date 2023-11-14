@@ -1,0 +1,49 @@
+<program>
+    <var_decl>: x
+        <literal>: 0
+    <var_decl>: y
+        <literal>: 10
+    <array>
+        <identifier>: array
+        <expression_list>
+            <literal>: 0
+            <literal>: 1
+            <literal>: 2
+            <literal>: 3
+            <literal>: 4
+    <key_value>
+        <identifier>: map
+        <key_value_pair>
+            <literal>: name
+            <literal>: Alice
+    <function>: init
+        <assignment>
+            <identifier>: x
+            <expression>
+                <literal>: 1
+                <operator>: +
+                <literal>: 2
+        <for_loop>: i
+            <assignment>
+                <identifier>: array
+                    <identifier>: i
+                <identifier>: i
+    <function>: max
+        <if>
+            <expression>
+                <identifier>: a
+                <operator>: >=
+                <identifier>: b
+            <return>
+            <else>
+                <return>
+    <main>
+        <function_call>
+            <identifier>: init
+        <assignment>
+            <identifier>: x
+            <function_call>
+                <identifier>: max
+                <arg_list>
+                    <identifier>: x
+                    <identifier>: y

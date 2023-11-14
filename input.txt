@@ -1,0 +1,33 @@
+# 变量声明
+
+x = 0;
+y = 10;
+array = [0, 1, 2, 3, 4];
+map = {"name": "Alice"};
+
+# 函数
+
+function init()
+{
+    x = 1 + 2;
+    for(i: 0, 10)
+    {
+        array[i] = i;
+    }
+}
+
+function max()
+{
+    if(a >= b)
+        return a;
+    else
+        return b;
+}
+
+# 入口
+
+main()
+{
+    init();
+    x = max(x, y);
+}
